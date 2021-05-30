@@ -48,5 +48,16 @@
         android:text="Tout supprimer"
         />
 </LinearLayout>
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Liste des taches"
+    android:textSize="30dp"
+    android:textStyle="bold"/>
+
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/rc_taches"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
 
 </LinearLayout>

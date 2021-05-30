@@ -2,6 +2,8 @@ package com.example.myapplicationtodolist;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,24 +12,45 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import  com.example.myapplicationtodolist.adapters.TacheAdapters;
+import com.example.myapplicationtodolist.models.Taches;
+
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    private List<Taches> tachess;
     Button btAddTask;
     String msg_tache, msg_priority;
     TextView tw_titre;
+    private RecyclerView rvTache;
+private TacheAdapters tacheAdapters;
     private static final int REQUEST_CODE_EXO_4 = 42;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
         btAddTask = findViewById(R.id.Bt_Add);
         btAddTask.setOnClickListener(this);
         tw_titre = findViewById(R.id.Tv_titre);
 
+
+        // Création de l'adapter customiser (Aliment avec la CardView)
+        tacheAdapters = new TacheAdapters(
+                getApplicationContext(),
+                tachess
+        );
+
+        // Configurer le RecyclerView
+        StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(
+                2, StaggeredGridLayoutManager.HORIZONTAL
+        );
+        rvTache.setLayoutManager(layoutManager);
+
+        rvTache.setAdapter(tacheAdapters);
+        rvTache.setHasFixedSize(true);
     }
 
     @Override

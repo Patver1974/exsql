@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+<TextView
+    android:id="@+id/layoutTaches"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="5"
+    android:text="taches"
+    android:textSize="20dp"
+    android:textStyle="bold"
+    android:paddingLeft="20dp"/>
+    <TextView
+        android:id="@+id/layoutTimes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:text="normal"
+        android:textSize="20dp"
+        android:textStyle="normal"
+        android:paddingLeft="20dp"/>
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/layout_priorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:text="priorite"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:paddingLeft="20dp"/>
+        <Button
+            android:id="@+id/layoutBtFait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:text="Fait"
+            android:paddingRight="30sp" />
+
+
+
+
+
+
+    </LinearLayout>
+
+
+    </LinearLayout>
